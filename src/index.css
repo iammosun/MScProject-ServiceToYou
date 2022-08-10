@@ -1,13 +1,489 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  height: 100%;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* Global Styles_____________________________________________________________ */
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: black;
+}
+
+.logo{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.logoDiv{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.center-container {
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', serif;
+}
+
+h1 {
+  font-size: 2.1rem;
+  /* margin: 1em 1em 0 1em; */
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.flexRowMargin{
+  margin-right: 0.5em;
+}
+
+
+
+/* Header____________________________________________________________________ */
+
+header .center-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-container{
+  background-color: rgb(225, 225, 231);
+}
+
+.nav {
+  display: flex;
+  margin-right: 2px;
+}
+
+.logo h4 {
+  margin-top: 0.8em;
+  font-weight: lighter;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+nav li {
+  font-weight: 600;
+  margin: 1.5em;
+  margin-top: 1em;
+  margin-right: 0;
+  justify-content: center;
+}
+
+nav a:hover{
+  text-decoration: underline;
+}
+
+.becomeProBtn, .bookServiceBtn, .seeAll{
+  color: white;
+  background-color: rgb(75, 75, 241);
+  padding: 0.8em;
+  border-radius: 5px;
+}
+
+.seeAll{
+  margin-top: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 1px solid rgb(75, 75, 241);
+}
+
+
+/* heading___________________________________________________________________ */
+.heading-container {
+  /* background-image: url(images/banner.jpg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+.registerHeadingContainer, .findAProContainer{
+  background-image: none;
+}
+
+.registerHeadingComments{
+  margin-bottom: 2em;
+  font-size: small;
+  line-height: 0.8em;
+}
+
+.userForm{
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.byTheWayLinks{
+  cursor: pointer;
+  color: rgb(2, 2, 58);
+  font-weight: 600;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.biggerFont{
+  font-weight: 600;
+}
+
+.h1 {
+  line-height: 4em;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-top: 4em;
+}
+
+.heading-btn{
+  padding-top: 0.7em;
+  align-items: center;
+}
+
+.userForm{
+  display: flex;
+  justify-content: center;
+}
+
+.userFormInput{
+  margin-bottom: 1em;
+  padding: 0.8em 6em 0.8em 1em;
+  border: 1px solid rgb(113, 113, 114);
+  border-radius: 0.4em; 
+}
+
+#tAndC{
+  margin: 0;
+  margin-right: 0.5em;
+}
+
+.userSearchBtn{
+  background-color: rgb(75, 75, 241);
+  border: 2px solid rgb(75, 75, 241);
+  padding: 0.8em 2em 0.8em 2em;
+  color: white;
+  margin-left: 1em;
+  cursor: pointer;
+}
+
+.rowFlex, .bookContactContainer{
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+
+.userFormContainer, .blurWrapper{
+  width: 50%;
+  border-radius: 5px;
+  border: 1px solid rgb(248, 249, 252);
+  box-shadow: 10px 10px 10px -5px rgb(194, 192, 197);
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.largeblurWrapper{
+  width: 80%;
+  padding: 5em;
+  border: 1px solid rgb(239, 239, 241);
+  align-items: center;
+}
+
+.largeblurWrapper h4{
+  text-align: center;
+  margin-top: 0;
+}
+
+.largeblurWrapper .blurWrapper{
+  padding: 0;
+}
+
+.proSignupForm{
+  align-items: flex-start;
+}
+
+.proFormInput{
+  width: 50%;
+}
+
+.termsCheck{
+  background-color: rgb(243, 243, 250);
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+
+.termsCheck p{
+  margin: 0;
+}
+
+.loginForm .userFormInput{
+  width: 60%;
+  height: 3em;
+  border-radius: 0;
+}
+
+.loginForm .userSearchBtn{
+  margin: 0;
+  width: 35%;
+}
+
+.loginForm #pwd{
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+
+.forgetPwd{
+  margin: 1.5em 0 1.5em;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.findProForm .flexRowMargin{
+  margin-right: 1em;
+}
+
+.proInfoContainer, .bookingContainer{
+  width: 100%;
+  border: 1px solid rgb(235, 231, 231);
+}
+
+/* .largeblurWrapper .blurWrapper{
+  border: 1px solid rgb(153, 39, 39);
+  width: 100%;
+  height: 100%;
+}
+
+.largeblurWrapper .proInfoContainer{
+  width: 100%;
+} */
+
+.largeblurWrapper .proInfo{
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.proInfo{
+  display: grid;
+  grid-template-columns: 25% 65%;
+  grid-gap: 10%;
+}
+
+/* .proPhotoFirst{
+  background-image: url(images/beautyTechnician.jpg);
+}
+
+.proPhotoSecond{
+  background-image: url(images/handyMan.jpg);
+}
+
+.proPhotoThird{
+  background-image: url(images/carpenter.jpg);
+} */
+
+.proPhoto{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.proPhotoInfo{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.proPhotoInfo p{
+  margin: 0;
+}
+
+.proPhotoInfo h4{
+  margin: 0.5em 0 0.5em;
+  margin-bottom: 1em;
+}
+
+
+.proStarsContainer{
+  display: flex;
+  align-items: center;
+}
+
+.proStarsContainer .proName{
+  margin-right: 2em;
+}
+
+.viewDetailsBtn{
+  width: 30%;
+  padding: 0.5em 0 0.5em;
+  border-radius: 2px;
+  position: relative;
+  right: 0;
+}
+
+.sortBy{
+  width: 35%;
+}
+
+.bookingPageH4 h4{
+  margin: 0;
+}
+
+.bookingInfo{
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-gap: 10%;
+}
+
+.bookingContainer{
+  justify-content: center;
+}
+
+.rowFlex2, .dateTimeContainer, .bookContactContainer{
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.rowFlex2{
+  gap: 1em;
+}
+
+.dateTimeContainer{
+  gap: 6em;
+}
+
+.numOfHours{
+  width: 3em;
+  padding: 0;
+}
+
+.bookingContainer p{
+  margin-bottom: 0;
+  margin-top: 2em;
+}
+
+.bookingContainer .userSearchBtn{
+  margin: 0;
+  margin-top: 2em;
+  padding: 1em 5em 1em;
+  border-radius: 3px;
+}
+
+#customerEmail{
+  margin-right: 5em;
+}
+
+
+
+
+/* main______________________________________________________________________ */
+
+  /* object-fit: cover; */
+
+.reviewer-img img {
+  height: 450px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.popServicesSection {
+  clear: both;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5em 0;
+}
+
+.popServicesSection img {
+  height: 150px;
+  width: 150px;
+  padding: 1.5em;
+}
+
+.popServicesContainer {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.popServicesContainer a:hover{
+  background-color: rgb(212, 212, 230);
+}
+
+.popServCont1, .popServCont2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.popServCont1 a, .popServCont2 a {
+  background-color: rgb(232, 232, 248);
+  margin-top: 10px;
+}
+
+.check-flex img {
+  height: 20px;
+  width: 20px;
+  margin-right: 1em;
+}
+
+.check-flex p {
+  margin: 0;
+}
+
+footer {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: black;
+  padding: 15px;
+  background-color: rgb(204, 204, 230);
+  position: relative;
+  bottom: 0;
+}
+
+footer a{
+  color: rgb(75, 75, 241);
+}
+
+.hide {
+  height: 0;
+  overflow: hidden;
 }
